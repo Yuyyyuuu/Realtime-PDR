@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            app:title="数据采集"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:titleTextColor="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/expandButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/Expand_btn"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_expand_down"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/save_pic_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/save_pic_btn"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_save_pic"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:contentDescription="@string/viewpager"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+            <com.example.myapplication.DataCollectView
+                android:id="@+id/data_collect_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <com.example.myapplication.MapView
+                android:id="@+id/trajectoryView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </androidx.viewpager.widget.ViewPager>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_border"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/StartButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="@string/Start_btn"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_start_btn" />
+
+
+        <ImageButton
+            android:id="@+id/StopButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="@string/Stop_btn"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_stop_btn" />
+
+
+        <ImageButton
+            android:id="@+id/processPDRButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="@string/PDR_btn"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_pdr"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/ResetButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="@string/Reset_btn"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_reset_btn" />
+
+        <ImageButton
+            android:id="@+id/SettingButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="@string/Setting_btn"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_setting_btn" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

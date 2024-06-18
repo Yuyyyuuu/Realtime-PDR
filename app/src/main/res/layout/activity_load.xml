@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/menu_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/colorPrimary"
+            app:fabAlignmentMode="center"
+            app:fabAnimationMode="slide"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="16dp"
+            app:fabCradleVerticalOffset="5dp"
+            app:menu="@menu/bottom_navigate"
+            app:hideOnScroll="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add_proj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorYellow"
+            android:clickable="true"
+            android:contentDescription="@string/add_pro"
+            android:focusable="true"
+            android:foregroundGravity="bottom"
+            android:src="@drawable/ic_add_pro"
+            app:backgroundTint="@color/gray"
+            app:borderWidth="0dp"
+            app:elevation="15dp"
+            app:fabSize="normal"
+            app:fab_colorPressed="@color/colorYellowDark"
+            app:layout_anchor="@id/menu_bar"
+            app:layout_anchorGravity="center_horizontal"
+            app:pressedTranslationZ="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/pro_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+        <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pro_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        app:title="工程目录"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/lines"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_lines"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/Expand_btn"
+                android:scaleType="fitCenter"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+        android:id="@+id/pro_scroll"
+        android:layout_below="@id/pro_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="true">
+        <LinearLayout
+            android:id="@+id/proj_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="ifContentScrolls"
+            android:orientation="vertical"
+            android:clickable="false"
+            android:focusable="true" />
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

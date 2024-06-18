@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PDR_Demo</string>
+    <string name="Start_btn">Start</string>
+    <string name="Reset_btn">Pause</string>
+    <string name="Stop_btn">Stop</string>
+    <string name="Setting_btn">Settings</string>
+    <string name="PDR_btn" />
+    <string name="viewpager" />
+    <string name="Expand_btn" />
+    <string name="add_pro">add_project_btn</string>
+    <string name="save_pic_btn">save_pic_btn</string>
+    <string name="pro_hint_word">请输入工程名称</string>
+
+</resources>

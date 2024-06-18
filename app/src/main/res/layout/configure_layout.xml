@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Filter Section -->
+    <TextView
+        android:id="@+id/filter_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="滤波方式:"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/filter_radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/filter_1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="均值滤波"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/filter_2"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="中值滤波"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/filter_3"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="去极值滤波"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+    <!-- Q Update Section -->
+    <TextView
+        android:id="@+id/q_update_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="航向角更新方式:"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/q_update_radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/q_update_1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="一阶龙格库塔"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/q_update_2"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="二阶龙格库塔"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/q_update_3"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="四阶龙格库塔"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+    <!-- Step Section -->
+    <TextView
+        android:id="@+id/step_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="脚步探测方法:"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/step_radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/step_1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="加速度计模长法"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/step_2"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="垂向加速度法"
+            android:textSize="12sp"/>
+
+    </RadioGroup>
+
+    <!-- Length Section -->
+    <TextView
+        android:id="@+id/length_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="步长估计方法:"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/length_radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/length_1"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="常数模型"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/length_2"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="身高步频模型"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/length_3"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:text="速度步频模型"
+            android:textSize="12sp"/>
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/height_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身高(m):"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"/>
+    <EditText
+        android:id="@+id/height_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="12sp"
+        android:autofillHints="" />
+
+
+</LinearLayout>

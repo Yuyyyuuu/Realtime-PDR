@@ -1,0 +1,17 @@
+<!-- res/drawable/circle_button_background.xml -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="#FFFFFF" /> <!-- 设置按钮的填充颜色为白色 -->
+
+    <!-- 设置按钮的边框为黑色 -->
+    <stroke
+        android:width="2dp"
+        android:color="#C9252525" />
+
+    <!-- 可选的：设置按钮的大小 -->
+    <size
+        android:width="32dp"
+        android:height="32dp" />
+</shape>
